@@ -1,0 +1,156 @@
+/* ─── Shared overlay / modal shell ───────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px var(--space-4) var(--space-4);
+  overflow-y: auto;
+}
+
+.selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.selector-title {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.selector-close {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition);
+}
+
+.selector-close:hover {
+  background: var(--border-soft);
+  color: var(--text-primary);
+}
+
+/* ─── Book selector ──────────────────────────────────── */
+.book-selector {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.testament-columns {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  padding: var(--space-4) 0;
+}
+
+.testament {
+  padding: 0 var(--space-4);
+}
+
+.testament-divider {
+  background: var(--border-soft);
+  margin: var(--space-3) 0;
+}
+
+.testament-label {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: var(--space-2) var(--space-2) var(--space-3);
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-btn {
+  text-align: left;
+  padding: 6px var(--space-2);
+  border-radius: var(--radius);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: background var(--transition), color var(--transition);
+}
+
+.book-btn:hover {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.book-btn--active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ─── Chapter selector ───────────────────────────────── */
+.chapter-selector {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+}
+
+.chapter-btn {
+  height: 40px;
+  border-radius: var(--radius);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: background var(--transition), color var(--transition);
+}
+
+.chapter-btn:hover {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.chapter-btn--active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.chapter-btn--active:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 520px) {
+  .testament-columns {
+    grid-template-columns: 1fr;
+  }
+  .testament-divider {
+    display: none;
+  }
+}

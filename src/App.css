@@ -1,41 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Georgia, serif;
-  background: #f7f5f0;
-  color: #2c2c2c;
-}
-
+/* App layout */
 .app {
   display: flex;
-  height: 100vh;
-  overflow-x: auto;
-}
-
-.verse-panel {
-  min-width: 360px;
-  max-width: 420px;
+  flex-direction: column;
   height: 100%;
-  padding: 48px 32px;
-  border-right: 1px solid #e0dbd0;
-  background: #faf9f6;
 }
 
-.verse-reference {
-  font-size: 0.85rem;
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #888;
-  margin-bottom: 16px;
-}
-
-.verse-text {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #2c2c2c;
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
 }

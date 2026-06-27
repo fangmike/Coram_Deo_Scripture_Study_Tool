@@ -1,0 +1,80 @@
+/* ─── Reader ─────────────────────────────────────────── */
+.reader-pane {
+  flex: 1;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-8);
+}
+
+/* Heading */
+.reader-heading {
+  margin-bottom: var(--space-7);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.reader-book {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.reader-chapter {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Scripture text */
+.reader-text {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 2;
+  color: var(--text-primary);
+}
+
+.verse {
+  /* inline flow — no block breaks between verses */
+}
+
+.verse-num {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent);
+  vertical-align: super;
+  margin-right: 3px;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  user-select: none;
+}
+
+/* Empty state */
+.reader-empty {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: var(--space-8) 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reader-pane {
+    padding: var(--space-6) var(--space-5) var(--space-7);
+  }
+
+  .reader-book {
+    font-size: 1.6rem;
+  }
+
+  .reader-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+}
